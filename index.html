@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <title>Paint</title>
+
+		<script language="javascript" src="helpers/p5.js"></script>
+		<script language="javascript" src="helpers/p5.dom.min.js"></script>
+		<script type="text/javascript" src="jscolor/jscolor.js"></script>
+
+		<script language="javascript" src="sketch.js"></script>
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+			<div id="wrapper">
+
+				<div class="controls">
+	        <!-- Drawing controls -->
+					<div id="control-upload" class="control">
+						<!-- in case you want to do the bonus of inserting a file upload -->
+	        	<div id="imageUpload"></div>
+		      </div>
+
+					<div id="control-brush" class="control">
+	        	<label>Brush type</label>
+	        	<div id="brushType"></div>
+		      </div>
+
+	        <div id="control-color" class="control">
+		        <label>Color </label>
+		        <input class="toolbarElement color {pickerPosition:'top', pickerInsetColor:'#777 #777 #777 #777', pickerBorderColor:'#777 #777 #777 #777', pickerFaceColor:'#eee'}" id="ColorPicker" value="000000" />
+		      </div>
+
+	        <div id="control-size" class="control">
+		        <label>Brush size</label>
+		        <span class="toolbarElement" id="brushSize"></span>
+		      </div>
+
+					<!-- Save and Clear Buttons -->
+					<button class="clearButton" type="button">
+							Clear
+					</button>
+					<button class="saveButton" type="button">
+							Save
+					</button>
+
+				</div>
+
+				<div id="drawingContainer"></div>
+
+
+<div class="clearboth"></div>
+
+
+		</div>
+	</body>
+</html>

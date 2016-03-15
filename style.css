@@ -1,0 +1,102 @@
+/*----------------
+  General
+------------------*/
+body {
+    background-color: #fefefe;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #cecece;
+    background-color: #ffffff;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#wrapper{
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1000px;
+    background-color: #333333;
+}
+
+/*----------------
+  Controls
+------------------*/
+.controls{
+  width:200px;
+  float: left;
+}
+.control{
+    float: left;
+    padding: 0 20px 20px 0;
+}
+#ColorPicker{
+  border: 1px solid #cecece;
+}
+#control-brush{
+  width: 200px;
+}
+input.color {
+    border: 0px #ccc;
+    font-family: inherit;
+    height: 3em;
+    border-radius: 2px;
+    width: 5em;
+    text-align: center;
+}
+/*----------------
+  Buttons
+------------------*/
+button {
+    height: 30px;
+    border: none;
+    outline: none;
+    background: #dfdfdf;
+    cursor: pointer;
+    border-radius: 2px;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: 6px;
+    text-transform:uppercase;
+}
+  button:hover {
+      background: #ccc;
+  }
+
+.clearButton {
+    background-color: #99DDEE;
+    color: #105062;
+    float: left;
+}
+  .clearButton:hover {
+      background-color: #88CCDD;
+      color: #0d3f4b;
+  }
+
+.saveButton {
+    background-color: #88EE66;
+    color: #20770c;
+    float: left;
+}
+  .saveButton:hover {
+      background-color: #77DD55;
+      color: #175509;
+  }
+
+/*----------------
+  Canvas
+------------------*/
+
+#drawingContainer{
+    margin:0 0px 0 40px;
+    float: left;
+}
+
+.clearboth{
+  clear: both;
+}
