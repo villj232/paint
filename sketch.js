@@ -32,6 +32,8 @@ function setup() {
     saveButton.mouseClicked(saveFunction);
 
     //TASK: set up the clear button
+    clearButton = select('.clearButton');
+    clearButton.mouseClicked(clearFunction);
 
 
     //set up the brush types
@@ -40,8 +42,14 @@ function setup() {
 
     brushPicker.option('paint brush');
     //TASK: add paint bucket option
+    brushPicker.option('paint bucket');
     //TASK: add eraser option
+    brushPicker.option('eraser');
+
     //TASK: add two new brush options
+    brushPicker.option("lineone");
+    brushPicker.option("linetwo");
+    brushPicker.option("linethree");
 
     //Set up the brush type event listener:
     brushPicker.changed(changeBrush);
@@ -56,8 +64,39 @@ function draw() {
     if (mouseIsPressed) {
         if (brushType == "paint brush"){
             standardStroke();
+
         }
         //add your other brush options here using else if
+        else if (brushType == "paint bucket"){
+          background ("#"+colorPicker.value());
+        }
+        else if (brushType == "eraser"){
+          strokeWeight(brushSize.value());
+          stroke("white");
+          line(pmouseX, pmouseY, mouseX, mouseY);
+
+        }
+        else if (brushType == "lineone"){
+          strokeWeight(brushSize.value());
+          stroke("#"+colorPicker.value());
+          rect(mouseX, mouseY, 50, 50);
+          ellipse(mouseX, mouseY, 30,30);
+
+        }
+
+        else if (brushType == "linetwo"){
+          strokeWeight(brushSize.value());
+          stroke("#"+colorPicker.value());
+          ellipse(mouseX, mouseY, 70, 70);
+          ellipse(mouseX, mouseY, 20, 20);
+        }
+        else if (brushType == "linethree"){
+          strokeWeight(brushSize.value());
+          stroke(mouseX/2,mouseX/2,mouseY/2);
+          rect(mouseX, mouseY, 50, 50);
+          ellipse(mouseX, mouseY, 30,30);
+
+        }
 
     } else {
         //Cursor options: ARROW, CROSS, HAND, MOVE, TEXT, or WAIT, or path for image
@@ -107,3 +146,6 @@ function saveFunction() {
 }
 
 //TASK: set up clear button function
+function clearFunction() {
+  background("white");
+}
